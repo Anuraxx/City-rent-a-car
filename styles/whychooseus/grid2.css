@@ -1,0 +1,40 @@
+@media only screen and (max-width: 960px) and (min-width: 768px){
+.one.withsmallpadding:not(.withbg):not(.fullwidth), .one.withpadding:not(.withbg):not(.fullwidth) {
+    padding: 40px 0 40px 0 !important;
+    background-attachment: scroll !important;
+    background-repeat: repeat !important;
+    background-position: center top !important;
+}
+.one {
+    margin: 0 !important;
+}
+.standard_wrapper {
+    width: 100%;
+    padding: 0 30px 0 30px;
+    box-sizing: border-box;
+}
+#page_content_wrapper, .page_content_wrapper, #page_caption .page_title_wrapper {
+    width: 100%;
+}
+.page_content_wrapper .inner {
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ppb_title {
+    font-size: 32px;
+}
+h2 {
+    font-size: 22px;
+}
+h4 {
+    font-size: 18px;
+}
+}
+@media only screen and (max-width: 767px){
+.one.withsmallpadding:not(.withbg):not(.fullwidth), .one.withpadding:not(.withbg):not(.fullwidth) {
+    padding: 30px 0 30px 0 !important;
+    box-sizing: border-box;
+    clear: both;
+}
+}

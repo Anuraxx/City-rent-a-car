@@ -1,0 +1,20 @@
+.page_tagline {
+    font-weight: 500;
+    font-family: Poppins, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: #8D9199;
+    text-transform: none;
+}
+.ppb_title {
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0px;
+    color: #000000;
+    font-size: 40px;
+}
+h2 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    font-family: Poppins, Helvetica, Arial, sans-serif;
+}

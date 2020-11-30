@@ -1,0 +1,233 @@
+@import url(http://fonts.googleapis.com/css?family=Maven+Pro);
+
+
+
+
+
+.fleets-tab-wrap {
+	-webkit-transition: 0.3s box-shadow ease;
+	transition: 0.3s box-shadow ease;
+	border-radius: 6px;
+	max-width: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	  -ms-flex-wrap: wrap;
+		  flex-wrap: wrap;
+	position: relative;
+	list-style: none;
+	background-color: #fff;
+	margin: 40px 0;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.fleets-tab-wrap:hover {
+	box-shadow: 0 12px 23px rgba(0, 0, 0, 0.23), 0 10px 10px rgba(0, 0, 0, 0.19);
+}
+
+.fleets-tab {
+	display: none;
+}
+.fleets-tab:checked:nth-of-type(1) ~ .fleets-tab__content:nth-of-type(1) {
+	opacity: 1;
+	-webkit-transition: 0.5s opacity ease-in, 0.2s transform ease;
+	transition: 0.5s opacity ease-in, 0.2s transform ease;
+	position: relative;
+	top: 0;
+	z-index: 100;
+	-webkit-transform: translateY(0px);
+		  transform: translateY(0px);
+	text-shadow: 0 0 0;
+}
+.fleets-tab:checked:nth-of-type(2) ~ .fleets-tab__content:nth-of-type(2) {
+	opacity: 1;
+	-webkit-transition: 0.5s opacity ease-in, 0.2s transform ease;
+	transition: 0.5s opacity ease-in, 0.2s transform ease;
+	position: relative;
+	top: 0;
+	z-index: 100;
+	-webkit-transform: translateY(0px);
+		  transform: translateY(0px);
+	text-shadow: 0 0 0;
+}
+.fleets-tab:checked:nth-of-type(3) ~ .fleets-tab__content:nth-of-type(3) {
+	opacity: 1;
+	-webkit-transition: 0.5s opacity ease-in, 0.2s transform ease;
+	transition: 0.5s opacity ease-in, 0.2s transform ease;
+	position: relative;
+	top: 0;
+	z-index: 100;
+	-webkit-transform: translateY(0px);
+		  transform: translateY(0px);
+	text-shadow: 0 0 0;
+}
+.fleets-tab:checked:nth-of-type(4) ~ .fleets-tab__content:nth-of-type(4) {
+	opacity: 1;
+	-webkit-transition: 0.5s opacity ease-in, 0.2s transform ease;
+	transition: 0.5s opacity ease-in, 0.2s transform ease;
+	position: relative;
+	top: 0;
+	z-index: 100;
+	-webkit-transform: translateY(0px);
+		  transform: translateY(0px);
+	text-shadow: 0 0 0;
+}
+.fleets-tab:first-of-type:not(:last-of-type) + label {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.fleets-tab:not(:first-of-type):not(:last-of-type) + label {
+  border-radius: 0;
+}
+.fleets-tab:last-of-type:not(:first-of-type) + label {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.fleets-tab:checked + label {
+	background-color: #fff;
+	box-shadow: 0 -1px 0 #fff inset;
+	cursor: default;
+}
+.fleets-tab:checked + label:hover {
+	box-shadow: 0 -1px 0 #fff inset;
+	background-color: #fff;
+}
+.fleets-tab + label {
+	width:33%;	  
+	box-shadow: 0 -1px 0 #eee inset;
+	border-radius: 6px 6px 0 0;
+	cursor: pointer;
+	display: block;
+	text-decoration: none;
+	color: #333;
+	-webkit-box-flex: 3;
+	-webkit-flex-grow: 3;
+	  -ms-flex-positive: 3;
+		  flex-grow: 3;
+	text-align: center;
+	background-color: #f2f2f2;
+	-webkit-user-select: none;
+	 -moz-user-select: none;
+	  -ms-user-select: none;
+		  user-select: none;
+	text-align: center;
+	-webkit-transition: 0.3s background-color ease, 0.3s box-shadow ease;
+	transition: 0.3s background-color ease, 0.3s box-shadow ease;
+	height: 50px;
+	box-sizing: border-box;
+	padding: 15px;
+}
+@media (min-width:768px) {
+		
+	 .fleets-tab + label {
+		width:auto;
+	} 
+}
+.fleets-tab + label:hover {
+	background-color: #f9f9f9;
+	box-shadow: 0 1px 0 #f4f4f4 inset;
+}
+.fleets-tab__content {
+	padding: 10px 25px;
+	background-color: transparent;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+	opacity: 0;
+	left: 0;
+	-webkit-transform: translateY(-3px);
+		  transform: translateY(-3px);
+	border-radius: 6px;
+	
+}
+
+/* Boring Styles */
+/* *,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+} */
+/* 	body {
+	font-family: 'Maven Pro', sans-serif;
+	background-color: #e7e7e7;
+	color: #777;
+	padding: 30px 0;
+	min-width:350px;
+} */
+.fleets-container h1,
+.fleets-container h2 {
+	margin: 0;
+	color: #444;
+	text-align: center;
+}
+
+.fleets-container h2 {
+	font-size: 1em;
+	margin-bottom: 30px;
+}
+
+.fleets-container p {
+	/* line-height: 1.6; */
+	margin-bottom: 20px;
+}
+.fleets-container {
+	max-width:1150px;
+	margin:0 auto;
+	padding: 0 1em;
+}
+
+.fleet-wrapper{
+    width: 100%;
+    background-color: #e7e7e7;
+    min-height: auto;
+    overflow-y: hidden;
+}
+.fleets-frames-wrapper{width: 100%;display: flex;flex-wrap: wrap;}
+.fleets-frame{
+	width: 33%;
+	/* height: 250px; */
+	/* border: 1px solid; */
+	flex-basis: 33%;
+	padding: 10px;
+	height: fit-content;
+}
+.fleets-frame img{
+	width: 100%;
+	height: 100%;
+	height: auto;
+}
+.fleets-frame h5{text-align: right;background-image: linear-gradient(to left, #FF5722, #722841);padding: 10px 0 10px 0;color: whitesmoke;padding: 10px;background-image: linear-gradient(to right, transparent, whitesmoke);color: #706e6e;font-size: 17px;/* font-weight: bold; */}
+.car-img-wrapper{width: 250px;height: 150px;margin: 0 auto;display: flex;align-items: center;justify-content: center;margin-bottom: 0px;}
+.hover-buttons-container{display: none;position: absolute;width: 100%;height: 100%;top: 0;flex-direction: column;align-items: center;justify-content: center;background-image: linear-gradient(45deg, #060606, transparent);right: 0;}
+.fleets-frame:hover{}
+.fleets-frame:hover .hover-buttons-container{
+	 display: flex; 
+}
+.onhover-button{width: 100px;height: 40px;outline: transparent none 0;border: 0;/* border-bottom: 1px dashed; */background-color: transparent;color: #cdcbcb;border-image-source: linear-gradient(to left, #16313e, #FF9800);border-image-slice: 1;}
+.onhover-button:nth-child(1){margin-bottom: 10px;}
+.fleet-desc img{height: 15px;width: min-content;color: black;display: inline;}
+.fleet-desc p{
+    margin: 0;
+    display: inline;
+}
+.fleet-desc{display: block;width: 100%;height: auto;text-align: right;padding: 0 10px;}
+@media (max-width: 850px){
+	.fleets-frame{
+    min-width: min-content;
+    width: 60%;
+    /* border-width: 1px 1px; */
+    /* border-style: solid; */
+    margin-bottom: 70px;
+}
+	.fleets-frames-wrapper{flex-direction: column;align-items: center;}
+}
+
+.ads-banner{width: 30%;height: 200px;float: left;background-color: whitesmoke;}
+.ad-item{
+    /* position: absolute; */
+    /* width: 35%; */
+    margin: 0 -10px;
+    }
