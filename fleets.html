@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-	<title>Travelix</title>
+	<title>CITY | Fleets</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Travelix Project">
+	<meta name="description" content="City Rent A Car">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 	<!--link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"-->
@@ -147,63 +147,19 @@
 			<div class="fleets-container">
 				<div class="fleets-tab-wrap">
 
-					<input type="radio" id="fleets-tab1" name="tabGroup1" class="fleets-tab" checked onclick="loadFleets('.fleets-tab__content:nth-child(7) .fleets-frames-wrapper','STANDARD')">
+					<input type="radio" id="fleets-tab1" name="tabGroup1" class="fleets-tab" checked onclick="sendInfo('.fleets-tab__content:nth-child(7) .fleets-frames-wrapper','STANDARD')">
 					<label for="fleets-tab1">STANDARD</label>
 
-					<input type="radio" id="fleets-tab2" name="tabGroup1" class="fleets-tab" onclick="loadFleets('.fleets-tab__content:nth-child(8)','SUV')">
+					<input type="radio" id="fleets-tab2" name="tabGroup1" class="fleets-tab" onclick="sendInfo('.fleets-tab__content:nth-child(8) .fleets-frames-wrapper','SUV')">
 					<label for="fleets-tab2">SUV</label>
 
-					<input type="radio" id="fleets-tab3" name="tabGroup1" class="fleets-tab" onclick="loadFleets('.fleets-tab__content:nth-child(9)','SEDAN')">
+					<input type="radio" id="fleets-tab3" name="tabGroup1" class="fleets-tab" onclick="sendInfo('.fleets-tab__content:nth-child(9) .fleets-frames-wrapper','SEDAN')">
 					<label for="fleets-tab3">SEDAN</label>
 
 					<div class="fleets-tab__content">
 						<div class="fleets-frames-wrapper">
-							<!-- <div class="fleets-frame">
-								<div class="car-img-wrapper">
-									<img src="images/suzuki_PNG12267.png">
-								</div>
-								<div class="fleet-desc">
-									<img src="https://motors.stylemixthemes.com/rental-two/wp-content/uploads/sites/15/2019/10/mcr-fuel-type.svg">
-									<p>Petrol</p>
-								</div>
-								<h5 class="fleet-name">SWIFT DEZIRE</h5>
-								
-								<div class="hover-button-container">
-									<button class="onhover-button" onclick="">BOOK NOW</button>
-									<button class="onhover-button" onclick="">CONTACT US</button>
-								</div>
-							</div>
-							 <div class="fleets-frame">
-								<div class="car-img-wrapper">
-									<img src="images/suzuki_PNG12277.png">
-								</div>
-								<div class="fleet-desc">
-									<img src="https://motors.stylemixthemes.com/rental-two/wp-content/uploads/sites/15/2019/10/mcr-fuel-type.svg">
-									<p>Petrol</p>
-								</div>
-								<h5>SWIFT DEZIRE</h5>
-								<div class="hover-button-container">
-									<button class="onhover-button" onclick="">BOOK NOW</button>
-									<button class="onhover-button" onclick="">CONTACT US</button>
-								</div>
-								
-							</div>
-							<div class="fleets-frame">
-								<div class="car-img-wrapper">
-									<img src="images/suzuki_PNG12296.png">
-								</div>
-								<div class="fleet-desc">
-									<img src="https://motors.stylemixthemes.com/rental-two/wp-content/uploads/sites/15/2019/10/mcr-fuel-type.svg">
-									<p>Petrol</p>
-								</div>
-								<h5>SWIFT DEZIRE</h5>
-								<div class="hover-button-container">
-									<button class="onhover-button" onclick="">BOOK NOW</button>
-									<button class="onhover-button" onclick="">CONTACT US</button>
-								</div>
-								
-							</div>-->
-							<div class="fleets-frame">
+
+							<!--div class="fleets-frame">
 								<div class="car-img-wrapper">
 									<img src="images/suzuki_PNG12296.png">
 								</div>
@@ -221,16 +177,16 @@
 									<button class="onhover-button" onclick="">CONTACT US</button>
 								</div>
 								
-							</div>
+							</div-->
 						</div>
 					</div>
 
 					<div class="fleets-tab__content">
-						
+						<div class="fleets-frames-wrapper"></div>
 					</div>
 
 					<div class="fleets-tab__content">
-						
+						<div class="fleets-frames-wrapper"></div>
 					</div>
 
 				</div>

@@ -200,7 +200,7 @@
 	height: auto;
 }
 .fleets-frame h5{text-align: right;background-image: linear-gradient(to left, #FF5722, #722841);padding: 10px 0 10px 0;color: whitesmoke;padding: 10px;background-image: linear-gradient(to right, transparent, whitesmoke);color: #706e6e;font-size: 17px;/* font-weight: bold; */}
-.car-img-wrapper{width: 250px;height: 150px;margin: 0 auto;display: flex;align-items: center;justify-content: center;margin-bottom: 0px;}
+.car-img-wrapper{width: 250px;height: 150px;margin: 0 auto;display: flex;align-items: center;justify-content: center;margin-bottom: 0px;overflow: hidden;}
 .hover-buttons-container{display: none;position: absolute;width: 100%;height: 100%;top: 0;flex-direction: column;align-items: center;justify-content: center;background-image: linear-gradient(45deg, #060606, transparent);right: 0;}
 .fleets-frame:hover{}
 .fleets-frame:hover .hover-buttons-container{
