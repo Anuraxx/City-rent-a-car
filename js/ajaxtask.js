@@ -1,24 +1,27 @@
 var request;
 var slotId;
 
-function getFleetFrame(carname,imgid,desc){
-    return '<div class="fleets-frame"><div class="car-img-wrapper"><img src="images/'+imgid+'"></div><div class="fleet-desc"><img src="https://motors.stylemixthemes.com/rental-two/wp-content/uploads/sites/15/2019/10/mcr-fuel-type.svg"><p>'+desc+'</p></div><h5 class="fleet-name">'+carname+'</h5><div class="hover-buttons-container"><button class="onhover-button" onclick="">BOOK NOW</button><button class="onhover-button" onclick="">CONTACT US</button></div></div>';
+function getFleetFrame(vehicle){
+    return '<div class="fleets-frame"><div class="car-img-wrapper"><img src="'+vehicle.imgId+'"></div><div class="fleet-desc"><img src="https://motors.stylemixthemes.com/rental-two/wp-content/uploads/sites/15/2019/10/mcr-fuel-type.svg"><p>'+vehicle.fueltype+'</p></div><h5 class="fleet-name">'+(vehicle.vehicleId).toUpperCase()+'</h5><div class="hover-buttons-container"><button class="onhover-button" onclick="">BOOK NOW</button><button class="onhover-button" onclick="">CONTACT US</button></div></div>';
 }
-function createFleetFrame(slotId,carname,imgid,desc){
-    var layout=getFleetFrame(carname.toUpperCase(),imgid,desc);
+function createFleetFrame(vehicle){
+    //console.log(vehicle.vehicleId);
+     var layout=getFleetFrame(vehicle);
     //var element1=document.getElementsByClassName('fleets-frames-wrapper')[0];
     var temp=$.parseHTML(layout);
+    //console.log(temp);
     temp.forEach(element => {
         $(slotId).append(element);
-    });
+    }); 
 
 }
-function sendInfo(slotId,catgname){
+function sendInfo(slotId,catgegory){
     this.slotId=slotId;
-    //console.log(catg1+" "+catg2+" "+catg3);
+    loadFleets([],catgegory);
+ /*    //console.log(catg1+" "+catg2+" "+catg3);
     //$(slotId).css('background-color','red');
-    var url="https://30b39c62f9cf.ngrok.io/proj/index.jsp";  
-    
+    //var url="https://30b39c62f9cf.ngrok.io/proj/index.jsp";  
+    var url=`http://localhost:3000/getVehicles?query&catg=SUV`;
 
     if(window.XMLHttpRequest){  
         request=new XMLHttpRequest();  
@@ -32,28 +35,42 @@ function sendInfo(slotId,catgname){
         request.open("GET",url,true);  
         //request.setRequestHeader("Access-Control-Allow-Origin", "*");
         request.send();  
-    }catch(e){alert("Unable to connect to server");}  
+    }catch(e){alert("Unable to connect to server");} */  
 }  
   
 function getInfo(){  
     if(request.readyState==4){  
-        var val=request.responseText;  
-        $(slotId).html(val);
+        var vehiclesData=request.responseText;  
+        loadFleets(JSON.parse(vehiclesData));
     }  
 }  
-function loadFleets(slotId,catgname){
-    $(slotId).text('');
-    setTimeout(()=>{
-    createFleetFrame(slotId,'Hyundai WagonR','suzuki_PNG12267.png','Petrol');
-    },0);
-    setTimeout(()=>{
-    createFleetFrame(slotId,'Maruti Ciaz','suzuki_PNG12277.png','Disel');
-},100);
-setTimeout(()=>{
-    createFleetFrame(slotId,'Maruti SX4','suzuki_PNG12296.png','Petrol');
-},200);
-setTimeout(()=>{
-    createFleetFrame(slotId,'Swift Desire','suzuki_PNG12309.png','Gas');
-},300);
+
+function loadFleets(vehiclesData,catg){
+
+     var SUV=[{"vehicleId":"TOYOTA FORTUNER","imgId":"./images/fleet/fortuner.png","fueltype":"Diesel"},{"vehicleId":"FORT ENDEAVOUR","imgId":"./images/fleet/fordendeavour.png","fueltype":"Diesel"},{"vehicleId":"Renault Duster","imgId":"./images/fleet/duster.png","fueltype":"Petrol"}];
+     var STANDARD=[{"vehicleId":"HONDA CITY","imgId":"./images/fleet/hondacity.png","fueltype":"Gas"},{"vehicleId":"NISSAN SUNNY","imgId":"./images/fleet/sunny.png","fueltype":"Petrol"},{"vehicleId":"MARUTI CIAZ","imgId":"./images/fleet/ciaz.png","fueltype":"Diesel"}];
+     var SEDAN=[{"vehicleId":"SWIFT DZIRE","imgId":"./images/fleet/swiftdezire.png","fueltype":"Petrol"},{"vehicleId":"HONDA AMAZE","imgId":"./images/fleet/hondaamage.png","fueltype":"Diesel"},{"vehicleId":"HUYNDAI XCENT","imgId":"./images/fleet/xcent.png","fueltype":"Diesel"},{"vehicleId":"TOYOTA ETIOS","imgId":"./images/fleet/etios.png","fueltype":"Petrol"}];
+     if(catg=='SUV') vehiclesData=SUV;
+     if(catg=='STANDARD') vehiclesData=STANDARD;
+     if(catg=='SEDAN') vehiclesData=SEDAN;
+     $(slotId).text('');
+
+
+     var timeout=200;
+    
+     vehiclesData.forEach(data=>{
+         
+        setTimeout(()=>{
+            var vinfo={
+                slotid: slotId,
+                vehicleId: data.vehicleId,
+                imgId: data.imgId,
+                fueltype: data.fueltype
+            }
+            createFleetFrame(vinfo);
+        },timeout);
+        timeout+=200;
+     })
+    
     
 }
