@@ -1,0 +1,1 @@
+/** This php file is created specially for heroku platform and not belong to this project */
