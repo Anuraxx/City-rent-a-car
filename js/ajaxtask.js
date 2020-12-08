@@ -1,6 +1,10 @@
 var request;
 var slotId;
 
+function loadDefault(){
+    sendInfo('.fleets-tab__content:nth-child(7) .fleets-frames-wrapper','STANDARD');
+}
+
 function getFleetFrame(vehicle){
     return '<div class="fleets-frame"><div class="car-img-wrapper"><img src="'+vehicle.imgId+'"></div><div class="fleet-desc"><img src="https://motors.stylemixthemes.com/rental-two/wp-content/uploads/sites/15/2019/10/mcr-fuel-type.svg"><p>'+vehicle.fueltype+'</p></div><h5 class="fleet-name">'+(vehicle.vehicleId).toUpperCase()+'</h5><div class="hover-buttons-container"><button class="onhover-button" onclick="">BOOK NOW</button><button class="onhover-button" onclick="">CONTACT US</button></div></div>';
 }
