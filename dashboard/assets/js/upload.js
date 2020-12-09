@@ -7,8 +7,10 @@ $("#veh_form").submit((event)=>{
     var formData={
         vehid: _data.get("veh_name"),
         fuelid: _data.get("veh_fuel_type"),
-        veh_catg: _data.get("veh_category")
+        veh_catg: (_data.get("veh_category").split(':'))[1]
     }
+    //veh_catg: (_data.get("veh_category").split(':'))[1]
+    //console.log(formData);
       _data.append("altered_file_name", newFileName);
 
       $("#submit").prop("disabled", true);
