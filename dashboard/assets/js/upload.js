@@ -1,3 +1,40 @@
+$("#catg_form").submit((event)=>{
+    event.preventDefault();
+    var form=document.getElementsByName("catg_form")[0];
+    var _data = new FormData(form);
+    var formData={
+        new_category: _data.get("new_category")
+    }
+    console.log(formData);
+    $("#submit2").prop("disabled", true);
+    $.ajax({
+        type: "POST",
+        url: "https://fortunate-versed-clematis.glitch.me/setCategory",
+        enctype: 'application/x-www-form-urlencoded',
+        data: JSON.stringify(formData),
+        dataType: "json",
+        processData: false,
+        crossDomain: true,
+        contentType: 'application/json; charset=utf-8',
+        cache: false,
+        timeout: 600000,
+        success: function (response) {
+          console.log("SUCCESS2 : ", response);
+              if(response.status=='500'){
+                  console.log('Somthing went wrong. Check logs.');
+              }
+              if(response.status=='201'){
+                  console.log('Category updated.');
+              } 
+              $("#submit2").prop("disabled", false);
+        },
+        error: function (e) {
+            console.log("ERROR2 : ", e);
+            $("#submit2").prop("disabled", false);
+        }
+    });
+})
+
 
 $("#veh_form").submit((event)=>{
     event.preventDefault();

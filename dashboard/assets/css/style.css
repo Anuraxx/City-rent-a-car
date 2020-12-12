@@ -1,0 +1,94 @@
+/*@import url(http://fonts.googleapis.com/css?family=Maven+Pro);*/
+
+/*@font-face{
+  font-family: 'Maven Pro';
+  src: url('../../../fonts/MavenPro/MavenPro-Regular.ttf') format('truetype');
+}
+
+*{
+  font-family: 'Maven Pro','Source Sans Pro', sans-serif !important;
+  
+}*/
+
+
+body {}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+  position:fixe;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 12px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+
+.submit{
+    width: 100px;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    margin-left: -5px;
+}
+
+input, select{
+    width: 180px;
+}
+input[type="file"]{
+    border: 0px solid;
+}
+label{
+    display: block;
+    width: 150px;
+    float: left;
+    font-size: small;
+    margin-bottom: 10px;
+}
+
+section{margin-bottom: 20px;}
+
+header{
+    padding: 5px;
+    background-image: linear-gradient(to right, black, #00000082);
+    max-height: 100px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+header div:first-child{float: left;width: 80%;}
+header div:last-child p{color: honeydew;}

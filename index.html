@@ -262,7 +262,7 @@
 		<div>
 			<div class="enq enq-anim" >
 				<div class="appointment-w3">
-					<form action="http://localhost:3000/prompt" method="POST">
+					<form  id="enquiry_form" name="enquiry_form">
 						<h2>WE WILL HAPPY TO HELP YOU</h2>
 						<div class="line-w3ls"> </div>
 						<div class="login-w3ls">
@@ -286,7 +286,7 @@
 							</div>
 							<div class="icons-agile">
 								<span class="fa fa-sort-desc" aria-hidden="true"></span>
-								<select class="form-control buttom">
+								<select class="form-control buttom" name="select_cartype">
 									<option value="">
 										Please select</option>
 									<option value="ac">AC Car</option>
@@ -304,7 +304,7 @@
 										<div class='input-group date icons-agile' id='datetimepicker11'>
 											<span class="far fa-calendar-check input-group-addon"
 												onclick="openCalen()" ></span>
-											<input type='text' class="form-control inp1"
+											<input type='text' class="form-control inp1" name="dor"
 												placeholder="choose journey time" value="" required />
 
 										</div>
@@ -316,7 +316,7 @@
 							<input type="text" class="hide" name="opt" hidden />
 							<input type="text" class="hide" name="da" hidden />
 							<div class="btnn" >
-								<input type="submit" value="Submit" class="sub01">
+								<input type="submit" value="Submit" class="sub01" id="sub01">
 							</div>
 						</div>
 					</form>
@@ -669,6 +669,7 @@
 	<script src="js/custom2.js"></script>
 	<script src="js/generic.js"></script>
 	<script src="js/index.js"></script>
+	<script src="js/ajaxtask2.js"></script>
 	<script>
 		function openCalen() {
 			console.log('clicked');

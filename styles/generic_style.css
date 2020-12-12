@@ -8,6 +8,7 @@
 }
 /* global style ----------------------------------------------------------------------- */
 *{
+  box-sizing: border-box;
   font-family: 'Maven Pro','Source Sans Pro', sans-serif !important;
   /* font-family: 'Poppins','Source Sans Pro', sans-serif !important; */
   /* font-family: cursive,'Source Sans Pro', sans-serif !important; */
