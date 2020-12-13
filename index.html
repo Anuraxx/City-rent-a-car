@@ -170,7 +170,6 @@
 
 					<!-- Slider Item -->
 					<div class="owl-item home_slider_item">
-						<!-- Image by https://unsplash.com/@anikindimitry -->
 						<div class="home_slider_background" style="background-image:url(images/car-interior.jpg)"></div>
 						<div class="home_slider_content text-center">
 							<div class="home_slider_content_inner" data-animation-in="flipInX"
@@ -286,7 +285,7 @@
 							</div>
 							<div class="icons-agile">
 								<span class="fa fa-sort-desc" aria-hidden="true"></span>
-								<select class="form-control buttom" name="select_cartype">
+								<select class="form-control buttom" name="select_cartype" id="select_cartype" ng-app='vehicleOption' ng-controller="loadVehNames_controller" ng-model="vehNames" ng-options="x for x in names">
 									<option value="">
 										Please select</option>
 									<option value="ac">AC Car</option>
@@ -662,6 +661,7 @@
 	<script src="enquiryform/Bootstrap/js/bootstrap-datetimepicker4.17.37.min.js"></script>
 
 	<!--script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script-->
+	<!--script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script-->
 	<script src="plugins/swiper/swiper5.4.1.min.js"></script>
 	<script src="js/swiper-init.js"></script>
 	<script src="js/keyframes.js"></script>
@@ -670,6 +670,9 @@
 	<script src="js/generic.js"></script>
 	<script src="js/index.js"></script>
 	<script src="js/ajaxtask2.js"></script>
+	<script src="js/owl-carousel-custom-init.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="js/controller-01.js"></script>
 	<script>
 		function openCalen() {
 			console.log('clicked');
