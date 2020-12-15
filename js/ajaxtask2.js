@@ -13,7 +13,7 @@ $("#enquiry_form").submit((event)=>{
     $("#sub01").prop("disabled", true);
     $.ajax({
         type: "POST",
-        url: "http://localhost:3000/ping/mail",
+        url: "https://fortunate-versed-clematis.glitch.me/ping/mail",
         enctype: 'application/x-www-form-urlencoded',
         data: JSON.stringify(formData),
         dataType: "json",
