@@ -2165,3 +2165,10 @@ section
 {
 	color: #FFFFFF;
 }
+
+
+
+/*--------------------------------------------custom------------------------------------------------------*/
+
+.owl-dots{display: none !important;}
+.main_nav_item::after{height: 1px;}

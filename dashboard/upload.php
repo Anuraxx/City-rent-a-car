@@ -27,8 +27,8 @@ if (file_exists($target_file)) {
   $uploadOk = 0;
 }
 
-// Check file size
-if ($_FILES["fileToUpload"]["size"] > 500000) {
+// Check file size in bytes  max 5mb
+if ($_FILES["fileToUpload"]["size"] > 5000000) {
   $uploadOk = 0;
 }
 

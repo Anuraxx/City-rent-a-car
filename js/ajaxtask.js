@@ -20,7 +20,7 @@ function createFleetFrame(vehicle){
 function sendInfo(slotId,catgegory){
     this.slotId=slotId;
 
-    var url=`https://fortunate-versed-clematis.glitch.me/getVehicles?query&catg=${catgegory}`;
+    var url=`${constant.server_url}/getVehicles?query&catg=${catgegory}`;
 
     if(window.XMLHttpRequest){  
         request=new XMLHttpRequest();  

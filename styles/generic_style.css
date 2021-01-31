@@ -1,5 +1,5 @@
 
-@import url(http://fonts.googleapis.com/css?family=Maven+Pro);
+@import url(https://fonts.googleapis.com/css?family=Maven+Pro);
 @import url(https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&amp);
 
 @font-face{
@@ -29,7 +29,8 @@
 }
 
 .main_nav{
-    background-image: linear-gradient(to right, black, transparent);
+    /*background-image: linear-gradient(to right, black, transparent);*/
+    background-color: rgb(21, 20, 21);
 }
 .super_container{
     background-image: url(../images/staring.jpg) !important;
@@ -246,4 +247,16 @@
     .footer-form-container{/* border-radius: unset; */}
     .footer-form-wrapper {width: 100%;}
     .footer-form-wrapper input {width: 100%;}
+}
+
+
+option{
+  background-color: #f1f1f1 !important;
+  color: black;
+}
+
+.default_status_text_box{
+  background-color: #fddee3;
+  color: #d84c5a!important;
+  /* padding: 5px 5px; */
 }

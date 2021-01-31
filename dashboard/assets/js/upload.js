@@ -1,3 +1,4 @@
+
 $("#catg_form").submit((event)=>{
     event.preventDefault();
     var form=document.getElementsByName("catg_form")[0];
@@ -9,7 +10,7 @@ $("#catg_form").submit((event)=>{
     $("#submit2").prop("disabled", true);
     $.ajax({
         type: "POST",
-        url: "https://fortunate-versed-clematis.glitch.me/setCategory",
+        url: `${constant.server_url}/setCategory`,
         enctype: 'application/x-www-form-urlencoded',
         data: JSON.stringify(formData),
         dataType: "json",
@@ -20,17 +21,23 @@ $("#catg_form").submit((event)=>{
         timeout: 600000,
         success: function (response) {
           console.log("SUCCESS2 : ", response);
-              if(response.status=='500'){
-                  console.log('Somthing went wrong. Check logs.');
+              if(response=='500'){
+                  console.log('Something went wrong. Check logs.');
+                  $('.default_status_text_box').text('Something went wrong. Please try again.');
+                  setStatusBoxProperty('FAIL');
               }
-              if(response.status=='201'){
+              if(response=='201'){
                   console.log('Category updated.');
+                  $('.default_status_text_box').text('Category updated.');
+                  setStatusBoxProperty('SUCCESS');
               } 
               $("#submit2").prop("disabled", false);
+              document.getElementById("catg_form").reset();
         },
         error: function (e) {
             console.log("ERROR2 : ", e);
             $("#submit2").prop("disabled", false);
+            document.getElementById("catg_form").reset();
         }
     });
 })
@@ -49,7 +56,6 @@ $("#veh_form").submit((event)=>{
     //veh_catg: (_data.get("veh_category").split(':'))[1]
     //console.log(formData);
       _data.append("altered_file_name", newFileName);
-
       $("#submit").prop("disabled", true);
  
       $.ajax({
@@ -68,16 +74,17 @@ $("#veh_form").submit((event)=>{
                 
                 if(response.status=='500'){
                     console.log('Somthing went wrong. Check logs.');
+                    $('.default_status_text_box').text('Something went wrong. Please try again.');
+                    setStatusBoxProperty('FAIL');
                 }
                 if(response.status=='201'){
                     
                     var vehicle_data={};
                     $.extend(vehicle_data,formData,response);
                     console.log(vehicle_data);
-                    
                      $.ajax({
                         type: "POST",
-                        url: "https://fortunate-versed-clematis.glitch.me/upload",
+                        url: `${constant.server_url}/upload`,
                         enctype: 'application/x-www-form-urlencoded',
                         data: JSON.stringify(vehicle_data),
                         dataType: "json",
@@ -88,11 +95,15 @@ $("#veh_form").submit((event)=>{
                         timeout: 600000,
                         success: function (response) {
                           console.log("SUCCESS2 : ", response);
-                              if(response.status=='500'){
-                                  console.log('Somthing went wrong. Check logs.');
+                              if(response=='500'){
+                                  console.log('Something went wrong. Check logs.');
+                                  $('.default_status_text_box').text('Something went wrong. Please try again.');
+                                  setStatusBoxProperty('FAIL');
                               }
-                              if(response.status=='201'){
+                              if(response=='201'){
                                   console.log('Vehicle updated.');
+                                  $('.default_status_text_box').text('Vehicle updated.');
+                                  setStatusBoxProperty('SUCCESS');
                               } 
                     
                         },
@@ -104,13 +115,14 @@ $("#veh_form").submit((event)=>{
                 }  
               
               $("#submit").prop("disabled", false);
+              document.getElementById("veh_form").reset();
 
           },
           error: function (e) {
 
               console.log("ERROR1 : ", e);
               $("#submit").prop("disabled", false);
-
+              document.getElementById("veh_form").reset();
           }
       });
  
