@@ -257,10 +257,10 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     z-index: 1;
     width: 50px;
     height: 50px;
-    border: 4px solid #007bff;
+    border: 4px solid #e91e63;
     background: #fff;
     border-radius: 50%;
-    color: #007bff;
+    color: #e91e63;
     display: block;
     position: relative;
     margin: 0 auto 10px auto;
@@ -274,7 +274,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     font-size: 1.3rem;
-    color: #007bff;
+    color: #e91e63;
 }
 .hiw_how-it-works .hiw_step .hiw_caption {
     display: block;
@@ -286,7 +286,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     position: absolute;
     /* z-index: -1; */
     top: 25px;
-    background: #007bff;
+    background: #e91e63;
 }
 .hiw_how-it-works .hiw_step:last-child:after{width: 0;}
  

@@ -1,0 +1,22 @@
+{
+    "index":{
+        "scripts":{
+            "src": ["js/ajaxtask2.js","https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js","js/controller-01.js"]
+        }
+    },
+    "about":{
+        "scripts":{
+            "src": ["js/ajaxtask.js","js/custom.js"]
+        }
+    },
+    "contact":{
+        "scripts":{
+            "src": ["js/contact_custom.js","js/custom.js","js/ajaxtask.js"]
+        }
+    },
+    "fleets":{
+        "scripts":{
+            "src": ["js/custom.js","js/ajaxtask.js"]
+        }
+    }
+}
